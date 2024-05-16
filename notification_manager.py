@@ -17,8 +17,6 @@ class NotificationManager:
 
     def send_email(self):
         for city in self.flight_deals:
-            # print(city)
-            # print(f"{city['city_to']}-{city['location_to']}")
             with smtplib.SMTP("smtp.gmail.com") as connection:
                 connection.starttls()
                 connection.login(user=self.my_email, password=self.my_password)
